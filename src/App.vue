@@ -1,10 +1,29 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+	<Navbar></Navbar>
+	<SearchBar class="my-3"></SearchBar>
+	<router-link to="/"></router-link>
+	<router-view/>
+	<Foot></Foot>
+  
 </template>
+
+<script>
+	// import {mapState} from 'vuex'
+	import Navbar from '@/components/Navbar.vue'
+	import SearchBar from '@/components/SearchBar.vue'
+	import Foot from '@/components/Foot.vue'
+	
+	export default {
+
+		components : {
+			Navbar,
+			SearchBar,
+			Foot
+		}
+	}
+	
+</script>
+
 
 <style>
 /*  根实例中的css样式，是全局的css样式，相当于以前的global.css  */
@@ -12,8 +31,8 @@ body{ margin: 0rem; }
 
 /*  用户分辨率兼容  */
 .container{
-	width: 1200px;
-	margin: 0rem auto;
+    width: 1200px;
+    margin: 0rem auto;
 }
 
 /*  指针  */
@@ -151,6 +170,8 @@ body{ margin: 0rem; }
 .border-red{ border: 1px solid #e33; }
 .border-blue{ border: 1px solid #99c; }
 .border-bottom{ border-bottom: 1px solid #eee; }
+.border-right-dark{border-right: 1px solid #ccc;}
+.border-right-none{border-right: 0px;}
 
 .box-shadow{ box-shadow: 0rem 0rem 0.5rem #ccc; }
 .box-shadow-hover-red:hover{ box-shadow: 0rem 0rem 0.5rem #e33; }
@@ -162,22 +183,34 @@ body{ margin: 0rem; }
 .rounded-left-lg{ border-radius: 0.5rem 0rem 0rem 0.5rem; }
 .rounded-right{ border-radius: 0rem 0.25rem 0.25rem 0rem; }
 .rounded-right-lg{ border-radius: 0rem 0.5rem 0.5rem 0rem; }
+.rounded-right-xl{ border-radius: 0rem 1rem 1rem 0rem; }
 .circle{ border-radius: 50%; }
 
+
+
 .w-0{ width: 0%; }
+.w-3{ width: 3%; }
 .w-5{ width: 5%; }
 .w-6{ width: 6%; }
+.w-7{ width: 7%; }
 .w-10{ width: 10%; }
+.w-13{ width: 13%;}
 .w-15{ width: 15%; }
 .w-17{ width: 17%; }
 .w-20{ width: 20%; }
 .w-23{ width: 23%; }
 .w-25{ width: 25%; }
 .w-26{ width: 26%; }
+.w-30{ width: 30%; }
 .w-33{ width: 33%; }
+.w-37{ width: 37%; }
 .w-40{ width: 40%; }
+.w-45{ width: 45%; }
+.w-47{ width: 47%; }
 .w-50{ width: 50%; }
+.w-53{ width: 53%; }
 .w-60{ width: 60%; }
+.w-63{ width: 63%; }
 .w-66{ width: 66%; }
 .w-72{ width: 72%; }
 .w-75{ width: 75%; }
@@ -187,6 +220,7 @@ body{ margin: 0rem; }
 .w-94{ width: 94%; }
 .w-95{ width: 95%; }
 .w-100{ width: 100%; }
+.w-min-792{min-width: 792px;}
 
 .box-sizing-border{ box-sizing: border-box; }
 
@@ -215,6 +249,9 @@ body{ margin: 0rem; }
 .bg-white{ background-color: #fff; }
 .bg-white-opacity{ background-color: rgba(255,255,255,0.4); }
 .bg-red-opacity{ background-color: rgba(225,51,51,0.4); }
+.bg-gray{background-color: #ddd;}
+.bg-dark{background-color: #444;}
+.bg-green{background-color: #67C23A;}
 
 /*  字体颜色  */
 .text-dark{ color: #333; }
@@ -222,8 +259,10 @@ body{ margin: 0rem; }
 .text-muted{ color: #999; }
 .text-light{ color: #ccc; }
 .text-white{ color: #fff; }
-.text-red{ color: #e33; }
+.text-red{ color: #F56C6C; }
 .text-blue{ color: #99c; }
+
+.text-hover-red:hover{color: #e33;}
 
 /*  字体尺寸  */
 .text-sm{ font-size: 0.875rem; }
@@ -231,6 +270,7 @@ body{ margin: 0rem; }
 .text-lg{ font-size: 1.125rem; }
 .text-xl{ font-size: 1.25rem; }
 .text-xxl{ font-size: 1.75rem; }
+.text-max{ font-size: 3rem; }
 
 /*  字体水平对齐方式  */
 .text-center{text-align: center;}
@@ -239,12 +279,24 @@ body{ margin: 0rem; }
 /*  字体加粗  */
 .text-bold{ font-weight: 600; }
 .text-bolder{ font-weight: 900; }
+.text-lighter{font-weight: lighter;}
 
 /*  字体线型  */
 .text-decoration-none{
-	text-decoration: none;
+    text-decoration: none;
+}
+.text-decoration-line-through{
+    text-decoration: line-through;
 }
 
 /*  内容溢出  */
 .overflow-hidden{ overflow: hidden; }
+
+/* 行高 */
+.line-height-12{line-height: 0.75rem;}
+
+/* 盒子模型 */
+.border-box{
+	box-sizing: border-box;
+}
 </style>

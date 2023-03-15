@@ -1,12 +1,15 @@
-import { createStore } from 'vuex'
+import {
+	createStore
+} from 'vuex'
+import website from './modules/website.js'
+import product from './modules/product.js'
+import customer from './modules/customer.js'
 
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+
+	modules: {
+		website,
+		product,
+		customer
+	}
 })
