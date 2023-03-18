@@ -174,6 +174,7 @@ body{ margin: 0rem; }
 .border-right-none{border-right: 0px;}
 
 .box-shadow{ box-shadow: 0rem 0rem 0.5rem #ccc; }
+.box-shadow-red{ box-shadow: 0rem 0rem 0.5rem #F56C6C; }
 .box-shadow-hover-red:hover{ box-shadow: 0rem 0rem 0.5rem #e33; }
 .box-shadow-hover-blue:hover{ box-shadow: 0rem 0rem 0.5rem #99c; }
 
@@ -275,6 +276,7 @@ body{ margin: 0rem; }
 /*  字体水平对齐方式  */
 .text-center{text-align: center;}
 .text-right{text-align: right;}
+.text-left{text-align: left;}
 
 /*  字体加粗  */
 .text-bold{ font-weight: 600; }
